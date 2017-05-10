@@ -4,7 +4,7 @@ var orm = {
 
 	selectAll: function(cb) {
 
-		connection.query('SELECT * FROM burgers', function (err, result) {
+		connection.query("SELECT * FROM burgers", function (err, result) {
 	    	if (err) {
 	    		throw err;
 	    	}
@@ -13,8 +13,9 @@ var orm = {
 	},
 
 	insertOne: function(burger_name, cb) {
-		connection.query('INSERT INTO burgers SET ?', {
-      		burger_name: burger_name,
+
+		connection.query("INSERT INTO burgers SET ?", {
+          burger_name: burger_name,
       		devoured: false,
       		date: timestamp
     	}, function (err, result) {
@@ -27,7 +28,7 @@ var orm = {
 
 	updateOne: function(burgerId, cb){
 
-		 connection.query('UPDATE burgers SET ? WHERE ?', [{devoured: true}, {id: burgerId}], function (err, result) {
+		 connection.query("UPDATE burgers SET ? WHERE ?", [{devoured: true}, {id: burgerId}], function (err, result) {
         if (err) throw err;
         cb(result);
       });

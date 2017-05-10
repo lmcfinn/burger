@@ -19,8 +19,8 @@ var burgers = {
 		});
 	},
 
-	updateOne: function(burger_id, cb) {
-		orm.updateOne(burger_id, function(res) {
+	updateOne: function(burgerId, cb) {
+		orm.updateOne(burgerId, function(res) {
 			console.log("model orm updateOne: ", res)
 			cb(res);
 		});

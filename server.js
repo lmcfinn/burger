@@ -9,7 +9,7 @@ var app = express();
 app.use(express.static(process.cwd() + "/public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.use(methodOverride("_method"));
+app.use(methodOverride("_method"));
 
 var exprssHandlebars = require("express-handlebars");
 

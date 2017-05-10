@@ -21,14 +21,14 @@ router.get("/index", function(req, res) {
 	});
 });
 
-router.post("/index/add", function(req, res) {
+router.post("/add", function(req, res) {
 	console.log("router add: ", req.body)
 	burger.insertOne(req.body.burger_name, function() {
 		res.redirct("/index");
 	});
 });
 
-router.post("/index/eat/:id", function(req, res) {
+router.post("/eat/:id", function(req, res) {
 	console.log("router eat req.params: ", req.params.id)
 	console.log("router eat req.body: ", req.body.id)
 
