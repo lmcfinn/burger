@@ -5,15 +5,15 @@ var burgers = {
 
 	selectAll: function(cb) {
 		orm.selectAll(function(res) {
-			console.log("model orm selectAll: ", res)
+			// console.log("model orm selectAll: ", res)
 			cb(res);
 			
 		})
 
 	},
 
-	selectOne: function(burger_name, cb) {
-		orm.insertOne(burger_name, function(res) {
+	selectOne: function(burger_name, date, cb) {
+		orm.insertOne(burger_name, date, function(res) {
 			console.log("model orm selectOne: ", res)
 			cb(res);
 		});
