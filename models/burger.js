@@ -20,6 +20,8 @@ var burgers = {
 	},
 
 	updateOne: function(burgerId, cb) {
+
+
 		orm.updateOne(burgerId, function(res) {
 			console.log("model orm updateOne: ", res)
 			cb(res);

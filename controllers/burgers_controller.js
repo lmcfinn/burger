@@ -24,7 +24,7 @@ router.get("/index", function(req, res) {
 router.post("/add", function(req, res) {
 	console.log("router add: ", req.body)
 	burger.insertOne(req.body.burger_name, function() {
-		res.redirct("/index");
+		res.redirect("/index");
 	});
 });
 
@@ -32,7 +32,10 @@ router.post("/eat/:id", function(req, res) {
 	console.log("router eat req.params: ", req.params.id)
 	console.log("router eat req.body: ", req.body.id)
 
-	burger.updateOne(req.params.id)
+	burger.updateOne(req.params.id, function(data) {
+		console.log("ssss", data);
+		res.redirect("/index")
+	})
 })
  
 
