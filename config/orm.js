@@ -1,9 +1,10 @@
 var connection = require("../config/connection.js");
 
+
+//Create mysql commands
 var orm = {
-
+  //Get all data from the table
 	selectAll: function(cb) {
-
 		connection.query("SELECT * FROM burgers", function (err, result) {
 	    	if (err) {
 	    		throw err;
@@ -12,9 +13,9 @@ var orm = {
     	});
 	},
 
+  //Insert new data into the table
 	insertOne: function(burger_name, cb) {
-
-
+    //Create timestamp
     var date;
     date = new Date();
     date = date.getUTCFullYear() + '-' +
@@ -37,10 +38,13 @@ var orm = {
     	});
 	},
 
+  //Update data in the table 
 	updateOne: function(burgerId, cb){
 
 		 connection.query("UPDATE burgers SET ? WHERE ?", [{devoured: true}, {id: burgerId}], function (err, result) {
-        if (err) throw err;
+        if (err) {
+          throw err;
+        }
         cb(result);
       });
 	}

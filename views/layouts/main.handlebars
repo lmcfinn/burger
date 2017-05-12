@@ -12,15 +12,20 @@
 </head>
 <body>
 	<div class="container">
+		<!-- Header image and title -->
 		<div class="row">
 			<img id="burger_img" src="/assets/img/burger.png">
 		</div>
 		<div class="row">
 			<h2 id="header">Eat-Da-Burger!</h2>
 		</div>
+
+		<!-- Dynmanic handlebars content -->
 		<div class="row">
 			{{{body}}}
 		</div>
+
+		<!-- Input box and instruction -->
 		<div class="row">
 			<form class="submit_box" action="/add" method="POST">
 				<div class="row">
