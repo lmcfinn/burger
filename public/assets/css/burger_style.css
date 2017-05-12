@@ -1,0 +1,33 @@
+.submit_box {
+	margin-left: 40%;
+	margin-top: 60px;
+}
+
+#burger_img {
+	margin-left: 40%;
+	margin-top: 10px;
+}
+
+body {
+	background-color: #ffa333;
+}
+
+#header {
+	margin-left: 37%;
+	margin-bottom: 20px;
+	color: white;
+	font-size: 40px;
+
+}
+
+#eaten {
+	padding-left: 80px;
+}
+
+#instruction {
+	margin-left: 29%;
+	margin-top: 10px;
+	color: white;
+	font-size: 16px;
+
+}

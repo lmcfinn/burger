@@ -1,0 +1,41 @@
+<div class="row">
+
+  <!-- Left Side -->
+  <div class="col-md-6">
+    <h4>Ready to eat</h4>
+    <div>
+      <!-- Create new form for each burger in the burgers table -->
+      {{#each burgers}}
+        <!-- Display if devoured == false -->
+        {{#unless devoured}}
+          <form action="/eat/{{id}}" method="POST">
+            <div class="input-group">
+              <li class="form-control" id="ready">{{id}}. {{burger_name}}</li>
+              <span class="input-group-btn">
+                <button class="btn" type="submit">Devour it!</button>
+              </span>
+            </div>
+          </form>
+        {{/unless}}    
+      {{/each}}
+    </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="col-md-6" id="eaten">
+    <h4>Already Eaten</h4>
+    <div>
+       <!-- Create new form for each burger in the burgers table -->
+      {{#each burgers}}
+        <!-- Display if devoured == true -->
+        {{#if this.devoured}}
+          <div class="input-group">
+            <li class="form-control">{{this.id}}. {{this.burger_name}}
+            </li>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+  
+</div>
