@@ -8,11 +8,12 @@
         {{#unless devoured}}
           <form action="/eat/{{id}}" method="POST">
             <div class="input-group">
-              <li class="form-control">{{id}}. {{burger_name}}</li>
+              <li class="form-control" id="ready">{{id}}. {{burger_name}}</li>
               <span class="input-group-btn">
                 <button class="btn" type="submit">Devour it!</button>
               </span>
             </div>
+            
           </form>
         {{/unless}}    
       {{/each}}
@@ -20,18 +21,18 @@
   </div>
 
   <!-- right side -->
-
-  <div class="col-md-6">
+  <div class="col-md-6" id="eaten">
     <h4>Already Eaten</h4>
     <div>
       {{#each burgers}}
         {{#if this.devoured}}
           <div class="input-group">
-            <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
+            <li class="form-control">{{this.id}}. {{this.burger_name}}
+            </li>
           </div>
         {{/if}}
       {{/each}}
     </div>
   </div>
 
-</row>
+</div>

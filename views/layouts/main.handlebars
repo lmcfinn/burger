@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Eat DAAAAAA Burger</title>
+	<title>Eat DAAAA Burger</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- css file -->
+	<link rel="stylesheet" href="/assets/css/burger_style.css">
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
-
-				<!-- <img src="../../public/assets/img/burger.jpg"> -->
-			</div>
-			<div class="col-md-8">
-				<img src="https://previews.123rf.com/images/thodoristibilis/thodoristibilis1402/thodoristibilis140200003/26081492-Cartoon-cheese-burger-making-a-thumbs-up-gesture-wearing-a-crown-and-sticking-out-tongue-Stock-Vector.jpg" width="200px" height="280px">
-				
-			</div>
+			<img id="burger_img" src="/assets/img/burger.png">
+		</div>
+		<div class="row">
+			<h2 id="header">Eat-Da-Burger!</h2>
 		</div>
 		<div class="row">
 			{{{body}}}
 		</div>
-		<form action="/add" method="POST">
-			<div class="row">
-				<input type="burger_name" name="burger_name"></input>
-			 	<button id="submit-button" type="submit" class="btn btn-danger">Submit</button>
-			</div>
-		</form>
+		<div class="row">
+			<form class="submit_box" action="/add" method="POST">
+				<div class="row">
+					<input type="burger_name" name="burger_name"></input>
+				 	<button id="submit-button" type="submit" class="btn btn-primary">Order
+				 	</button>
+				</div>
+			</form>
+			<p id="instruction">Enter the burger you would like to order and then hit the order button</p>	
+		</div>
 	</div>
-
-	
-
 </body>
 </html>

@@ -12,16 +12,14 @@ var burgers = {
 
 	},
 
-	selectOne: function(burger_name, date, cb) {
-		orm.insertOne(burger_name, date, function(res) {
+	selectOne: function(burger_name, cb) {
+		orm.insertOne(burger_name, function(res) {
 			console.log("model orm selectOne: ", res)
 			cb(res);
 		});
 	},
 
 	updateOne: function(burgerId, cb) {
-
-
 		orm.updateOne(burgerId, function(res) {
 			console.log("model orm updateOne: ", res)
 			cb(res);
