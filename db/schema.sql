@@ -6,9 +6,9 @@ REATE TABLE clients
 );
 
 CREATE TABLE burgers (
-	id int AUTO_INCREMENT NOT NULL,
-	burger_name varchar(255) NOT NULL,
-	devoured boolean,
-	date timestamp,
-	PRIMARY KEY (id)
+    id INT AUTO_INCREMENT NOT NULL,
+    burger_name varchar(255) NOT NULL,
+    devoured boolean,
+    createdAt TIMESTAMP NOT NULL,
+    PRIMARY KEY (id)
 );
